@@ -1,7 +1,7 @@
 {
   "output": "../",
   "locals": {
-    "title": "Tyler J. Fisher",
+    "title": "Tyler Fisher",
     "description": "homepage of Tyler J. Fisher, journalist and web developer",
     "url": "http://www.tylerjfisher.com",
     "keywords": "journalist, journalism, javascript, python, django, html, css, data, visualization, northwestern, medill"
