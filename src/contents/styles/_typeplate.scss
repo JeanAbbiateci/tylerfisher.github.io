@@ -38,8 +38,8 @@ $line-height: 1.65 !default;
 $font-size: 112.5 !default; // percentage value (16 * 112.5% = 18px)
 $font-base: 16 * ($font-size/100) !default; // converts our percentage to a pixel value
 $measure: $font-base * $line-height;
-$font-family: "Merriweather", serif;
-$font-family-sans: "Open Sans", sans-serif;
+$font-family: "ff-tisa-web-pro", serif;
+$font-family-sans: "freight-sans-pro", sans-serif;
 $font-properties: $font-weight, $line-height, $font-size, $font-family;
 
 //the serif boolean var can be redeclared from another stylesheet. However
@@ -621,11 +621,6 @@ h6 {
 
 p {
 	margin: auto auto $indent-val;
-	& + p {
-		//siblings indentation
-		text-indent: $indent-val;
-		margin-top: -$indent-val;
-	}
 }
 
 
