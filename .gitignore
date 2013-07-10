@@ -15,4 +15,4 @@ npm-debug.log
 
 .sass-cache
 
-src
+node_modules

@@ -1,0 +1,30 @@
+{
+  "output": "../",
+  "locals": {
+    "url": "http://www.tylerjfisher.com",
+    "name": "Tyler Fisher",
+    "owner": "Tyler Fisher",
+    "description": "News Apps Developer"
+  },
+  "plugins": [
+    "./plugins/paginator.coffee"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  },
+  "get_projects": {
+    "perPage": 12
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Lessons of Running My First News Apps Team - Tyler Fisher
+    </title>
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml" title="News Apps Developer">
+    <script type="text/javascript" src="//use.typekit.net/obm4ofp.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body>
+    <header>
+      <div class="nameplate">
+        <h1><a href="http://localhost:8080">Tyler Fisher</a></h1>
+        <h4 class="description">News Apps Developer</h4>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/code/">Code</a></li>
+          <li><a href="/presentations/">Presentations</a></li>
+          <li><a href="/resume.pdf">Résumé</a></li>
+          <li><a href="http://twitter.com/tylrfishr" target="_blank">Twitter</a></li>
+          <li><a href="http://www.github.com/TylerFisher" target="_blank">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <h1>Lessons of Running My First News Apps Team</h1>
+      <p class="date"><span>06.04.2013</span></p>
+      <section class="content"><h6>Note: This was originally published on <a href="http://source.mozillaopennews.org/en-US/articles/lessons-running-my-first-news-apps-team/" target="_blank">Source</a>.</h6>
+<p>Last week, I launched my first team-developed <a href="http://www.northbynorthwestern.com/housing">news app</a> with a group of amazing student news nerds and peers: <a href="http://www.twitter.com/hil_fung">Hilary Fung</a>, <a href="http://www.twitter.com/danhillreports">Dan Hill</a>, <a href="http://www.twitter.com/kkrebeccalai">Rebecca Lai</a>, <a href="http://www.twitter.com/shenghis">Sheng Wu</a> and <a href="http://www.twitter.com/ktzhu">Katie Zhu</a>. We developed <a href="http://www.northbynorthwestern.com/housing">a housing guide</a> for incoming freshmen to Northwestern University who are in the process of applying for freshman housing. It includes an interactive map of campus, filters to narrow down housing options, photos and videos of each hall, quotes from current residents and basic statistics including number of students, room size, cost and distance to key campus&nbsp;locations.</p>
+<p><span class="more"></span></p>
+<p><a href="http://www.northbynorthwestern.com/housing"><img src="/articles/news_apps_team/housing-home.png" alt="The North by Northwestern Housing Guide"></a></p>
+<p>The project, annually published by <a href="http://www.northbynorthwestern.com/">North by Northwestern</a>, has existed in some form or another since 2008 and has been developed by rock stars like <a href="http://www.twitter.com/giratikanon">Tom Giratikanon</a> (the site’s founder), <a href="http://www.twitter.com/sisiwei">Sisi Wei</a> and <a href="http://www.twitter.com/eschow">Emily Chow</a>. For the past two years, the project has fallen on my shoulders as the publication’s former interactive editor and current&nbsp;webmaster.</p>
+<p>Last year, I foolishly undertook the development process all by myself. The final result was <a href="http://www.northbynorthwestern.com/story/the-2012-freshman-housing-guide/">somewhat embarrassing</a>, a barely functional mess of a Canvas-based map with a whole bunch of ugly JavaScript to go with it. It was all I could manage as a <em>much</em> more limited programmer without the access or technical ability to break free of our Django-based&nbsp;<span class="caps">CMS</span>.</p>
+<p>This year was going to be different. I learned my lesson. I would get help. I would get people better and smarter than me to develop alongside me, and together, we could develop the app I truly wanted to&nbsp;make.</p>
+<p>First of all, we needed to present the reporting, photography and videography of nearly <em>50 student reporters</em> in the best light possible. They work too hard for the app itself to let them down. After some discussion, the team decided the best solution was a fully independent Django app. Our potential users, incoming freshmen, would use this application from anywhere in the world with any kind of device, so we needed something responsive. We wanted to provide basic information and accurate data on each hall. However, we knew that our advantage over standard university advertisement had always been the opinions of current residents on each dorm and the deep level of access we had to all of the facilities. Thus, we wanted to emphasize the character of every residence hall in this edition of the guide as&nbsp;well.</p>
+<p>I think we accomplished all of those things. But it wasn’t easy, even with the ridiculous talent on the team. In my first role as a lead on a <em>team</em> of developers, I learned a lot of lessons. Here are some of&nbsp;them.</p>
+<h2>Set early content deadlines and meet&nbsp;them.</h2>
+<p>One of the best decisions we made early on was to get all content ready weeks in advance. Of course, small changes continued to be made up to the night of publication, but this allowed us to be in a place where we could develop with real data. The inevitably late content still came in at a time that was manageable to integrate in the development process. In a Django environment, we were able to fine-tune our models to our content so that we had nothing&nbsp;extraneous.</p>
+<p>This helped our design process too. We knew exactly what we had to work with, so even our initial mockups were fairly accurate. We could iterate and find the best place for each piece of content we had. In a responsive context, we could orchestrate our content in a way that made sense on every device we tested on. On the dorm detail pages, we could play with many iterations of content choreography. In the end, we chose to put the vital statistics (dorm size, location, amenities) in the left rail for a desktop size, but we forced that content below the multimedia elements on mobile. Before we reached that solution, the vital statistics section existed on just about every other area of the page. Knowing what we had early helped us find the proper&nbsp;placement.</p>
+<p>Of course, meeting our content deadlines was only possible because of the project’s phenomenal editors: <a href="http://www.twitter.com/denisedslu">Denise Lu</a> and <a href="https://twitter.com/meggophone">Megan Thielking</a>.</p>
+<h2>Use spreadsheets because they&nbsp;rule.</h2>
+<p>To populate our database with our content, our editors filled out a spreadsheet with all of the information we needed, including each individual quotation from a student, an embed code for each video and a link to every photo to go in our slideshows. It was a comprehensible way for them to make sure the right content got into the development team’s hands. And for us, it just took a few <a href="https://github.com/edcrewe/django-csvimport">django-csvimport</a> commands to get the database running. The smoothness of this process makes me excited to find a project for something like <a href="http://tarbell.tribapps.com/readme/">Tarbell</a>.</p>
+<h2>Pair programming is awesome. Do it&nbsp;often.</h2>
+<p>Operating on different schedules, we found it hard for all of us to meet in the same place at the same time and hack on the project. This made our code go in many divergent paths before it finally all came back together with about a week until publication. In that last week, I met with just about every member of the team individually for a few hours, and we paired on whatever aspect of the project they were responsible&nbsp;for.</p>
+<p>Perhaps it was the threat of deadlines looming over us, but those pairing sessions were ridiculously productive, and I wish I had started having those sessions earlier in the development process. Having me there as the common element between the sessions helped unify the code and make sure everything that needed to get done was completed. I may not have written every line of code, but I saw most of them get written and approved of&nbsp;them.</p>
+<h2>Ask for data and sometimes, ye shall&nbsp;receive.</h2>
+<p>As a student journalist, I know covering a private university is hard. Private universities have very little responsibility to disclose what they do, and they generally have no reason to tell student journalists (or any journalists) anything more. With the housing guide, we have often been limited as to what information we could provide because, discouraged from so many other stories, we never asked for the data. But this time, Northwestern’s Residential Services cooperated with us in the interest of providing accurate information on all fronts to incoming&nbsp;freshmen.</p>
+<p>Thanks to their data, we could provide accuracy on the number of residents in each hall and what types of rooms are available. We were able to provide clarity on the different types of options available for freshmen. The relationship was mutually beneficial, and as student journalists at private universities, we should look for more relationships like this one where we can practice with data and use it to make something&nbsp;worthwhile.</p>
+<h2>Assign roles based on expertise, but get everyone involved in&nbsp;everything.</h2>
+<p>Dan knows his way around a map. Hilary and Rebecca are fantastic designers. Sheng and Katie have a wealth of full-stack development experience. It was easy for me to assign responsibilities to each member of the team based on his or her expertise, and that general structure ensured things got&nbsp;done.</p>
+<p>But this experience was meant to teach as well as produce. So when Dan was ready to incorporate his map into the design, we showed him the <a href="http://www.inuitcss.com/">grid system we used</a> to make the responsive magic happen. When it was time to get Hilary’s design templated into Django, we did it by showing her how the models and views worked so she could begin writing template tags herself. They all came out of this experience with more knowledge than when they agreed to help out over a month ago, or at least I hope&nbsp;so.</p>
+<h2>Test with&nbsp;force.</h2>
+<p>The first live day for this app was not great, and most of the blame for the problems lay with me. I made a few dumb mistakes in the Django app that caused the entire server, not just the guide, to crash. The dumbest one was this: to make the map, I decided it was a good idea (despite protest from smarter members of the team) to run a Django view through a jQuery <span class="caps">AJAX</span> request that turned the GeoDjango Multipolygons into GeoJSON data that Leaflet could parse. This made our Varnish cache useless, forcing a request to the application on every single page view. Naturally, the server crashed four times in two&nbsp;hours.</p>
+<p>Thanks to a massive assist from <a href="http://www.twitter.com/jeremybowers">Jeremy Bowers</a>, I baked out the <span class="caps">JSON</span> to static files on S3 and used those to make the AJAX request. I could have avoided this whole problem if I load tested the application with any bit of force. I figured we wouldn’t get enough traffic for the Django requests to matter, but even a few thousand page views crashed our server. I would have known that if I did some load testing before&nbsp;deployment.</p>
+<h2>Have individual humility and group&nbsp;hubris.</h2>
+<p>This is the best project I have ever been a part of, leader or not, and that is because I worked with a team of my most talented friends together to work towards an achievable goal. I didn’t try to do this all by myself. Instead, we had a group-wide hubris that pushed our boundaries as developers and designers. As a team, we shot for a professional-grade news application, and, in my ever-so-biased opinion, we&nbsp;succeeded.</p>
+</section>
+    </article>
+    <div class="border"></div>
+    <footer>
+      <div class="content-wrap">
+        <section class="about">
+        </section>
+        <section class="copy">
+          <p>&copy; 2013 Tyler Fisher &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith" target="_blank">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
