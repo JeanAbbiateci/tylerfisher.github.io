@@ -1,0 +1,8 @@
+extends layout
+
+block prepend title
+  | #{ "Code - "}
+
+block content
+
+    article(class="projects")!= typogr(page.html).typogrify()
