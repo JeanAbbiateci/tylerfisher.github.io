@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Intelligent Story Modeling - Tyler Fisher
+    </title>
+    <link rel="alternate" href="http://www.tylerjfisher.com/feed.xml" type="application/rss+xml" title="News Apps Developer">
+    <script type="text/javascript" src="//use.typekit.net/obm4ofp.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="/styles/main.css">
+  </head>
+  <body>
+    <header>
+      <div class="nameplate">
+        <h1><a href="http://www.tylerjfisher.com">Tyler Fisher</a></h1>
+        <h4 class="description">News Apps Developer</h4>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/code/">Code</a></li>
+          <li><a href="/presentations/">Presentations</a></li>
+          <li><a href="/resume.pdf">Résumé</a></li>
+          <li><a href="http://twitter.com/tylrfishr" target="_blank">Twitter</a></li>
+          <li><a href="http://www.github.com/TylerFisher" target="_blank">GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <h1>Intelligent Story Modeling</h1>
+      <p class="date"><span>04.26.2013</span></p>
+      <section class="content"><h6>Note: This was originally published on <a href="https://medium.com/rethinking-the-news/4cf61f22f4d4" target="_blank">Medium</a>.</h6>
+<p>For about seven months, I have been developing <a href="http://www.northbynorthwestern.com/">my college publication’s</a> homebrew Django-based <span class="caps">CMS</span> (not to be confused with <a href="http://www.django-cms.org/">django-cms</a>). I suppose “maintain” would be the more appropriate word; I didn’t actually build the <span class="caps">CMS</span>. Instead, I’ve added a few features, subtracted a few useless ones and optimized for performance. These days, it works well, and my editors know how to use it effectively. But I’m&nbsp;frustrated.</p>
+<p><span class="more"></span></p>
+<p>I’m frustrated by the inflexible taxonomy system. I’m frustrated by the disconnect between writing, editing and publication. I’m frustrated by the roundabout way we curate content every day for our readers. That is not a knock against our original <span class="caps">CMS</span> architect. He (yes, he, singular) did a great job. I’m frustrated by the limitations inherent in any content management system available today. But most of all, I’m frustrated by the one-size-fits-all story&nbsp;model.</p>
+<p>At North by Northwestern, we publish <a href="http://www.northbynorthwestern.com/story/ao-spring-comedy-show-cancelled/">breaking news briefs</a> and <a href="http://www.northbynorthwestern.com/story/the-story-behind-Danny-Did/">longform features</a>, <a href="http://www.northbynorthwestern.com/story/busy-busy-busy/">opinion articles</a> and <a href="http://www.northbynorthwestern.com/story/celebration-at-the-confines/">sports recaps</a>, <a href="http://www.northbynorthwestern.com/story/em-man-of-steel-em/">blogs</a> and <a href="http://www.northbynorthwestern.com/story/unexpected-art/">photo essays</a>, even <a href="http://www.northbynorthwestern.com/story/to-the-last-dollar/">online versions</a> of writing from our <a href="http://issuu.com/nbnmag/docs/nbnwinter2013book/3">quarterly sister magazine</a>. Yet, to the <span class="caps">CMS</span>, they’re all “stories,” and they all look and function the same way. That doesn’t make any&nbsp;sense.</p>
+<p>So the solution is obvious, right? Define some more types of story models. Maybe have a Mag model, a Feature model, a Breaking model, a Media model. But where do I draw the line? And at what point does the <span class="caps">CMS</span> become too cumbersome for full-time college students to use effectively on a daily publishing schedule? What if a new format arises, and an old one dies? Do I continuously adapt the entire CMS structure to the whims of the&nbsp;publication?</p>
+<p>Certainly, there is a better way forward beyond defining more story models. Like responsive design allows us to be ready for any device on the front-end, more intelligent story modeling could prepare us for any type of story a publication wants to&nbsp;produce.</p>
+<p>Each story we tell has a different genesis. For example, breaking news comes from something immediate and surprising: a press release, a tweet, a physical act, an event. So shouldn’t the relevant “something” become the center of the story? A short breaking news blurb on the same story page that hosts a 5,000 word feature says, “This story doesn’t matter. We had nothing to say.” A story model that pays a greater attention to the genesis of the story can make that more exciting. Put the event at the center. Show it; don’t tell it. How the front-end design handles that genesis is up to the publication, but our content management systems should be smarter about sourcing material and making that material immediately available to&nbsp;readers.</p>
+<p>I’d like to turn to the evil geniuses at Buzzfeed for a <a href="http://www.buzzfeed.com/ryanhatesthis/asian-fraternity-causes-uproar-after-wearing-blackface-to-dr">more specific example</a> of how this might work. This story describes an Asian fraternity at <span class="caps">UC</span> Irvine who dressed in blackface to be like Jay-Z. They shot videos and took many photos of themselves in costume. This is a fairly serious story, especially by Buzzfeed standards, and it is presented with all of the source material referenced right there, in the story. There are a few good things about&nbsp;this.</p>
+<ol>
+<li><p>The reader is engaged with the&nbsp;story.</p>
+</li>
+<li><p>The reader stays on the page instead of opening YouTube or Facebook in a new tab and getting sucked into that rabbit&nbsp;hole.</p>
+</li>
+<li><p>The story is more credible. The primary source is available and&nbsp;present.</p>
+</li>
+</ol>
+<p>With no knowledge of Buzzfeed’s custom <span class="caps">CMS</span>, I would imagine that their web producers are just really good at embedding YouTube videos and posting images. Their CMS probably makes that pretty easy, too. But what if our story creation started from the source? That’s where it starts in our heads, so let’s make story creation more intuitive. Use a browser extension on a tweet to send it to a story creation page, where not only has the tweet been embedded, but the data surrounding the tweet has also been logged into the CMS. Once the story is published, the CMS can then know how to present the story based on where the story came from. In the example where you start from a tweet, the embedded tweet becomes the major part of the&nbsp;story.</p>
+<p>This is where things get more interesting. Want to provide a model and view of stories found from tweets? Easy, now that you’re automatically logging that data. Want to build a taxonomy system of stories based on the source (not just Twitter, but the Twitter user)? Easy. Now, apply this to sourcing from YouTube, Facebook, or any other <span class="caps">URL</span>-based source. Suddenly, you’re pulling in data from every story that sources from something on the Internet, which is to say, a lot of&nbsp;things.</p>
+<p>We’ve only even discussed breaking news as a place to think about smarter modeling. What about tying sports recaps to the data surrounding the story, leveraging the <span class="caps">ESPN</span> API (or something comparable)? Now we can say, “show me all of the game recaps between Chicago and Philadelphia.” When your hometown slugger approaches a home run record, building a game-by-game explanation of that season becomes easier because you’ve automatically been logging that data already and tying it to each story you&nbsp;write.</p>
+<p>When you start each individual story by building from an online source, an intelligent <span class="caps">CMS</span> can build a view based on the data provided. Suddenly, the context in which a story comes in informs the way it is presented. That data remains available and can easily inform follow-ups and related stories. Really, intelligent story modeling is all about building a smarter editorial process where sources and data are intrinsically involved in story&nbsp;creation.</p>
+<div class="pullquote"><em>The information sciences are now sufficiently developed so that we can give some systematic attention to the forms of the messages we prepare and the best ways to compose and send them so that they will be received and understood.</em></div>
+
+<p>Philip Meyer wrote that in 1991(!) for his rewrite of Precision Journalism, but we still haven’t figured out how to systematically approach the format of our storytelling. I don’t have the answers. But I have some ideas, and I hope we can start discussing how to approach intelligent story modeling. As the webmaster of a college publication, I’m in the unique position of controlling every piece of technology the website uses, and I hope to explore intelligent story modeling while I have the ability to implement an idea across the website with no overhead. But I hope I’m not alone in wanting to build a better system for&nbsp;journalism.</p>
+<p>I posted this on Medium under a new collection, “Rethinking the News,” in order to hear some more ideas about how we (hackers, writers, editors, producers, thinkers, designers, optimists, pessimists) can make journalism and journalists better. I’d love to hear your thoughts. Let’s make journalism indispensable&nbsp;again.</p>
+</section>
+    </article>
+    <div class="border"></div>
+    <footer>
+      <div class="content-wrap">
+        <section class="about">
+        </section>
+        <section class="copy">
+          <p>&copy; 2013 Tyler Fisher &mdash; powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith" target="_blank">Wintersmith</a>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

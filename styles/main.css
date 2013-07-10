@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  *
 .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
@@ -46,7 +47,7 @@ pre code {
  *
  */
 html {
-  font: normal 112.5%/1.65 "Merriweather", serif; }
+  font: normal 112.5%/1.65 "ff-tisa-web-pro", serif; }
 
 body {
   -webkit-hyphens: auto;
@@ -69,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 6.5rem;
   margin-bottom: 0.25385rem; }
 
-.giga {
+.giga, header h1 {
   font-size: 90px;
   font-size: 5rem;
   margin-bottom: 0.33rem; }
@@ -89,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2.66667rem;
   margin-bottom: 0.61875rem; }
 
-.gamma, h3 {
+.gamma, h3, article h1 {
   font-size: 36px;
   font-size: 2rem;
   margin-bottom: 0.825rem; }
@@ -99,21 +100,18 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.33333rem;
   margin-bottom: 1.2375rem; }
 
-.epsilon, h5 {
+.epsilon, h5, article h2 {
   font-size: 21px;
   font-size: 1.16667rem;
   margin-bottom: 1.41429rem; }
 
-.zeta, h6 {
+.zeta, h6, article h3 {
   font-size: 18px;
   font-size: 1rem;
   margin-bottom: 1.65rem; }
 
 p {
   margin: auto auto 1.5em; }
-  p + p {
-    text-indent: 1.5em;
-    margin-top: -1.5em; }
 
 abbr,
 acronym,
@@ -307,29 +305,119 @@ p + .drop-cap {
  *
  */
 body {
-  margin: 0 auto; }
+  background-color: #f9f9f9;
+  width: 100%;
+  margin: 10px 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "freight-sans-pro", sans-serif; }
 
-p {
-  font-family: "Merriweather", serif; }
+a {
+  color: #6c71c4;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+.pullquote {
+  position: relative;
+  padding: 1em;
+  font-size: 24px; }
+  .pullquote:before, .pullquote:after {
+    height: 1em;
+    opacity: 1;
+    position: absolute;
+    font-size: 1.5em;
+    color: #6c71c4; }
+  .pullquote:before {
+    content: '“';
+    top: 0;
+    left: 0; }
+  .pullquote:after {
+    content: '”';
+    bottom: 0;
+    right: 0; }
 
 header {
-  background-color: #381C5F;
-  padding: 50px 0;
-  margin-bottom: 20px;
-  -webkit-box-shadow: 0px 4px 8px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 0px 4px 8px rgba(50, 50, 50, 0.75);
-  box-shadow: 0px 4px 8px rgba(50, 50, 50, 0.75); }
-  header h1, header h2, header h3, header h4, header h5, header h6 {
-    color: #eee;
-    text-align: center; }
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 15px double #6c71c4; }
+  header h1 {
+    font-weight: 900; }
+    header h1 a {
+      transition: color .5s;
+      -webkit-transition: color .5s; }
+      header h1 a:hover {
+        color: #a3a6da;
+        text-decoration: none; }
+  header ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px; }
+    header ul li {
+      font-family: "freight-sans-pro", sans-serif;
+      font-size: 21px;
+      display: inline-block;
+      padding: 0 10px 0 0; }
+  @media screen and (max-width: 600px) {
+    header h1 {
+      font-size: 48px; } }
 
 article {
-  margin: 0 auto;
-  width: 50%; }
-  @media screen and (max-width: 600px) {
+  margin: 20px auto 0;
+  max-width: 660px; }
+  article .date {
+    color: #999; }
+  article h1 {
+    color: #6c71c4; }
+    article h1 a {
+      transition: color .5s;
+      -webkit-transition: color .5s; }
+      article h1 a:hover {
+        color: #a3a6da;
+        text-decoration: none; }
+  @media screen and (max-width: 660px) {
     article {
       width: 90%;
-      margin: 0 auto; } }
+      margin: 20px auto 0; } }
+  article img {
+    max-width: 660px;
+    width: 100%; }
+
+.border {
+  margin-top: 20px;
+  border-bottom: 15px double #6c71c4; }
+
+footer {
+  margin: 20px auto 0;
+  text-align: center;
+  font-family: "freight-sans-pro", sans-serif; }
+
+.preview {
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc; }
+  .preview:nth-child(3) {
+    border-bottom: none; }
+
+article.projects {
+  max-width: 1368px;
+  width: 95%;
+  margin: 0 auto;
+  clear: both; }
+  article.projects .project {
+    width: 25%;
+    padding-left: 5%;
+    display: inline-block;
+    vertical-align: top; }
+    article.projects .project h1 {
+      font-size: 24px;
+      text-align: center; }
+    article.projects .project figure {
+      width: 100%;
+      margin: 0 0 10px; }
+    article.projects .project figcaption {
+      font-family: "freight-sans-pro", sans-serif;
+      color: #999;
+      font-style: italic; }
+  @media screen and (max-width: 1023px) {
+    article.projects .project {
+      width: 90%; } }
