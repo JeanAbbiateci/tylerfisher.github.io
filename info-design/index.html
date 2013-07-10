@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to Information Design — Tyler Fisher</title>
+
+		<meta name="author" content="Tyler Fisher">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/solarized_dark.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/tyler.css" id="theme">
+
+		<script type="text/javascript" src="//use.typekit.net/iea3dum.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+						<h1>Information Design</h1>
+					<p>
+						<a href="http://tylerjfisher.com" target="_blank">Tyler Fisher</a> / <a href="http://twitter.com/euphonos" target="_blank">@euphonos</a>
+					</p>
+				</section>
+
+				<section>
+					<span class="one-word"><em>why?</em></span>
+				</section>
+
+				<section data-state="title-slide">
+					<p class="title-slide-text">Precision Journalism</p>
+				</section>
+
+				<section>
+					<h2>Journalism as science</h2>
+						<ul>
+							<li class="fragment">Adopting scientific method</li>
+							<li class="fragment">Scientific objectivity</li>
+							<li class="fragment">Systematic approach to content delivery</li>
+						</ul>
+				</section>
+
+				<section>
+					<blockquote>
+						What is needed to discover hidden facts and arrive at elusive truths is a skilled determination to get at them.
+					</blockquote>
+					<p><small>— Lawrence Cranberg, physicist</small></p>
+				</section>
+
+				<section>
+					<p class="one-word"><em>data.</em></p>
+				</section>
+
+				<section>
+					<h2>What do I do?</h2>
+					<ul>
+						<li class="fragment">Collect it.</li>
+						<li class="fragment">Store it.</li>
+						<li class="fragment">Retrieve it.</li>
+						<li class="fragment">Analyze it.</li>
+						<li class="fragment">Reduce it.</li>
+						<li class="fragment">Communicate it.</li>
+					</ul>
+				</section>
+
+				<section>
+					<p class="big-serif"><em>that sounds like work.</em></p>
+				</section>
+
+				<section>
+					<img src="img/method.png">
+				</section>
+
+				<section>
+					<p class="big-serif"><em>but journalists are objective!</em></p>
+				</section>
+
+				<section>
+					<p class="big-serif"><em>don't confirm. evaluate!</em></p>
+				</section>
+
+				<section data-state="title-slide">
+					<p class="title-slide-text">Communicating Data</p>
+				</section>
+
+				<section>
+					<p class="big-serif"><em>far vs. near</em></p>
+				</section>
+
+				<section>
+					<h2>Types of charts</h2>
+					<ul>
+						<li class="fragment">Bar charts!</li>
+						<li class="fragment">Stacked bar charts!</li>
+						<li class="fragment">Line charts!</li>
+						<li class="fragment">Scatterplots!</li>
+						<li class="fragment"><a href="http://www.excelcharts.com/blog/optimal-number-categories-pie-chart/" target="_blank">Pie charts?</a></li>
+						<li class="fragment"><a href="http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/" target="_blank">Maps?</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Be fair</h2>
+					<ul>
+						<li class="fragment">Context!</li>
+						<li class="fragment">Don't exaggreate trends!</li>
+						<li class="fragment"><a href="http://www.vulture.com/2013/04/leading-men-age-but-their-love-interests-dont.html" target="_blank">Consistent axes</a></li>
+						<li class="fragment"><a href="http://www.npr.org/blogs/itsallpolitics/2013/02/13/171935151/chart-check-did-obama-s-graphics-enhance-his-big-speech" target="_blank">Read more...</a></li>
+					</ul>
+				</section>
+
+				<section data-state="title-slide">
+					<p class="title-slide-text">okay, let's do something.</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
