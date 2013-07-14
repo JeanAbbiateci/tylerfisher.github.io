@@ -310,7 +310,7 @@ body {
   margin: 10px 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "freight-sans-pro", sans-serif; }
+  font-family: "proxima-nova", sans-serif; }
 
 a {
   color: #6c71c4;
@@ -354,7 +354,7 @@ header {
     padding: 0;
     margin-bottom: 10px; }
     header ul li {
-      font-family: "freight-sans-pro", sans-serif;
+      font-family: "proxima-nova", sans-serif;
       font-size: 21px;
       display: inline-block;
       padding: 0 10px 0 0; }
@@ -390,7 +390,7 @@ article {
 footer {
   margin: 20px auto 0;
   text-align: center;
-  font-family: "freight-sans-pro", sans-serif; }
+  font-family: "proxima-nova", sans-serif; }
 
 .preview {
   margin-top: 20px;
@@ -415,7 +415,7 @@ article.projects {
       width: 100%;
       margin: 0 0 10px; }
     article.projects .project figcaption {
-      font-family: "freight-sans-pro", sans-serif;
+      font-family: "proxima-nova", sans-serif;
       color: #999;
       font-style: italic; }
   @media screen and (max-width: 1023px) {
