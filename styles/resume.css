@@ -314,7 +314,11 @@ html, body {
   background-color: #eee; }
   @media print {
     html, body {
-      height: 95%; } }
+      height: 95%;
+      background-color: white; }
+      html a, body a {
+        color: #444;
+        text-decoration: none; } }
 
 a {
   color: #a52f14; }
@@ -381,19 +385,22 @@ h2 {
     color: #eee;
     text-align: center; }
   @media print {
-    .nameplate .circle {
-      width: 125px;
-      height: 125px; }
-    .nameplate h1 {
-      top: -30px !important; }
-    .nameplate .name h2 {
-      font-size: 24px; }
-    .nameplate p, .nameplate ul {
-      font-size: 11px; }
-    .nameplate .contact li {
-      display: block; }
-      .nameplate .contact li:first-child:after {
-        content: ""; } }
+    .nameplate {
+      background-color: black; }
+      .nameplate .circle {
+        width: 125px;
+        height: 125px; }
+      .nameplate h1 {
+        top: -30px !important;
+        color: black !important; }
+      .nameplate .name h2 {
+        font-size: 24px; }
+      .nameplate p, .nameplate ul {
+        font-size: 11px; }
+      .nameplate .contact li {
+        display: block; }
+        .nameplate .contact li:first-child:after {
+          content: ""; } }
   @media screen and (max-width: 1040px) {
     .nameplate .name h2 {
       font-size: 32px; }
@@ -449,7 +456,8 @@ h2 {
     .list h2, .list h4, .list p {
       margin-bottom: .75em; }
     .list h2 {
-      font-size: 20px; }
+      font-size: 20px;
+      color: #222; }
     .list h4 {
       font-size: 15px; }
     .list p, .list ul {
