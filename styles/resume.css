@@ -322,6 +322,10 @@ a {
 h2 {
   font-weight: 100;
   font-family: "adelle", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif; }
+  h2 a {
+    text-decoration: none; }
+    h2 a:hover {
+      text-decoration: underline; }
 
 .nameplate {
   position: fixed;
@@ -342,6 +346,8 @@ h2 {
     margin: 0 auto;
     background-color: #eee;
     border-radius: 100px; }
+    .nameplate .circle a {
+      text-decoration: none; }
     .nameplate .circle h1 {
       font-family: "Symbola";
       color: #222;
