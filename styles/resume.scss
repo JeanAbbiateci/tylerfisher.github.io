@@ -1,0 +1,257 @@
+@import 'typeplate';
+@import '_vars-typeplate';
+
+@font-face {
+    font-family: Symbola;
+    src: url('../fonts/Symbola.ttf');
+}
+
+$accent-color: rgb(165, 47, 20);
+
+html, body {
+    height: 100%;
+    font-family: "adelle-sans", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    background-color: #eee;
+    @media print {
+        height: 95%;
+    }
+}
+
+a {
+    color: $accent-color;
+}
+
+h2 {
+    font-weight: 100;
+    font-family: "adelle", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;;
+}
+
+.nameplate {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 25%;
+    height: 100%;
+    float: left;
+    background-color: $accent-color;
+    color: #eee;
+
+    a {
+        color: #eee;
+    }
+
+    .circle {
+        height: 200px;
+        width: 200px;
+        position: relative;
+        top: 20%;
+        margin: 0 auto;
+        background-color: #eee;
+        border-radius: 100px;
+
+        h1 {
+            font-family: "Symbola";
+            color: #222;
+            line-height: 200px;
+            text-align: center;
+            position: relative;
+            top: 10px;
+            font-weight: normal;
+            color: $accent-color;
+            @extend .tera;
+        }
+    }
+
+    .name {
+        color: #eee;
+        position: relative;
+        top: 25%;
+        text-align: center;
+        h2 {
+            color: #eee;
+        }
+    }
+
+    .contact {
+        position: relative;
+        top: 25%;
+        text-align: center;
+        list-style-type: none;
+        margin-top: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+        }
+
+        li:first-child {
+            &:after {
+                content: " | ";
+            }
+        }
+    }
+
+    .reference {
+        position: relative;
+        top: 25%;
+        color: #eee;
+        text-align: center;
+    }
+
+    @media print {
+        .circle {
+            width: 125px;
+            height: 125px;
+        }
+        h1 {
+            top: -30px !important;
+            @extend .gamma;
+        }
+
+        .name h2 {
+            font-size: 24px;
+        }
+
+        p, ul {
+            font-size: 11px;
+        }
+
+        .contact li {
+            display: block;
+            &:first-child:after {
+                content: "";
+            }
+        }
+    }
+
+    @media screen and (max-width: 1040px) {
+        .name h2 {
+            font-size: 32px;
+        }
+
+        .contact li {
+            display: block;
+            &:first-child:after {
+                content: "";
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .circle {
+            width: 125px;
+            height: 125px;
+        }
+
+        h1 {
+            top: -30px !important;
+            @extend .gamma;
+        }
+
+        p, ul {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        clear: both;
+        width: 100%;
+        height: 60px;
+        z-index: 100;
+
+        .name {
+            display: inline-block;
+            top: 0%;
+            width: 100%;
+            h2 {
+                margin-top: 10px !important;
+                font-size: 24px;
+                margin-bottom: 0px !important;
+            }
+        }
+
+        .circle, .contact, .reference {
+            display: none;
+        }
+
+    }
+
+}
+.list {
+    width: 75%;
+    margin-bottom: 20px;
+    float: right;
+    .txt {
+        padding-left: 30px;
+
+        .info {
+            padding: 20px 50px 0;
+            max-width: 660px;
+        }
+    }
+
+    h2 {
+        color: $accent-color;
+    }
+
+    .skills-list {
+        list-style-type: none;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    @media print {
+        .txt {
+            padding-left: 0px;
+        }
+        .txt .info {
+            padding: 5px 25px 0;
+        }
+
+        h2, h4, p {
+            margin-bottom: .75em;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 15px;
+        }
+
+        p, ul {
+            font-size: 12px;
+            margin-bottom: .5em;
+        }
+        .extra {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        width: 100%;
+        position: relative;
+        clear: both;
+        top: 80px;
+
+        .txt {
+            padding-left: 15px;
+        }
+        .txt .info {
+            padding: 5px 15px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        p, ul {
+            font-size: 14px;
+        }
+    }
+
+}
