@@ -5,9 +5,70 @@
     <atom:link href="http://www.tylerjfisher.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://www.tylerjfisher.com</link>
     <description>News Apps Developer</description>
-    <pubDate>Tue, 04 Jun 2013 20:00:00 -0400</pubDate>
+    <pubDate>Thu, 01  Aug 2013 20:00:00 -0400</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>How to - Portfolio sites for journalists, GitHub makes ‘em cheap and (kinda) easy</title>
+      <link>http://www.tylerjfisher.com/articles/portfolio/</link>
+      <pubDate>Thu, 01  Aug 2013 20:00:00 -0400</pubDate>
+      <guid isPermaLink="true">http://www.tylerjfisher.com/articles/portfolio/</guid>
+      <author></author>
+      <description>&lt;h6&gt;Note: This was originally published on the &lt;a href=&quot;http://knightlab.northwestern.edu/2013/08/02/how-to-portfolio-sites-for-journalists-github-makes-em-cheap-and-kinda-easy/&quot; target=&quot;_blank&quot;&gt;Knight Lab blog&lt;/a&gt;.&lt;/h6&gt;
+&lt;p&gt;Time and time again, new journalists are told to market themselves and make a brand for themselves. The new media heroes of the day have all done it — Nate Silver and his &lt;a href=&quot;http://fivethirtyeight.blogs.nytimes.com/&quot;&gt;fivethirtyeight&lt;/a&gt; brand, Andrew Sullivan and &lt;a href=&quot;http://dish.andrewsullivan.com/&quot;&gt;The Daily Dish&lt;/a&gt;, Brian Stelter and &lt;a href=&quot;http://www.mediabistro.com/tvnewser/&quot;&gt;TVNewser&lt;/a&gt;, &lt;a href=&quot;http://www.mthomps.com/&quot;&gt;Matt Thompson&lt;/a&gt;, &lt;a href=&quot;http://katchow.com/&quot;&gt;Kat Chow&lt;/a&gt;, &lt;a href=&quot;http://toure.com/&quot;&gt;Touré&lt;/a&gt;, &lt;a href=&quot;http://about.me/danyelsmith&quot;&gt;Danyel Smith&lt;/a&gt; — the list goes on. Sometimes, though, all you need a static site to tell people who you are and what you do. You need a portfolio site.&lt;/p&gt;
+&lt;p&gt;The only problem is that hosting a website is hard work. Just registering a domain name requires navigating a labyrinth of menus and navigation bars designed in the early 2000s that do more to confuse than inform. And for those looking to host full blogs on WordPress or other platforms, it requires syncing a web host to a domain registrar, which can get even more confusing.&lt;/p&gt;
+&lt;p&gt;In Medill, students are instructed early to buy their own domain name and install a WordPress blog on it. While Medill has a special promotion with Dreamhost to lower the cost of entry for hosting for the first few months, many students drop their hosting plan when the cost becomes too expensive. Yet when internship and job application season comes around, they want a portfolio site to show off their work.&lt;/p&gt;
+&lt;p&gt;Many turn back to WordPress and Dreamhost hosting, paying upwards of $10 per month to host what is essentially a static page on slow servers running WordPress. If the site does work, it is way too heavy for serving the purpose of linking readers to all of that student&amp;#39;s work elsewhere on the web. Most times, a simple, static site will serve that purpose just fine. In fact, my own &lt;a href=&quot;http://www.tylerjfisher.com/&quot;&gt;website&lt;/a&gt; is static. &lt;/p&gt;
+&lt;p&gt;What if I told you that, if you code your own website, you could host it &lt;em&gt;for free&lt;/em&gt; on a much faster, reliable platform than Dreamhost? Hosting your website on &lt;a href=&quot;http://www.github.com/&quot;&gt;GitHub&lt;/a&gt;, the collaborative coding platform, not only provides free static hosting through GitHub Pages, but also encourages you to learn how to code properly using version control.&lt;/p&gt;
+&lt;h2&gt;Wait, What?&lt;/h2&gt;
+&lt;p&gt;Okay, let&amp;#39;s get a few terms out of the way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Static website&lt;/strong&gt;: A static website is simply a website that has no backend. It doesn&amp;#39;t use WordPress, Drupal or any other form of blogging engine that requires a server. So if you build your website in pure HTML, CSS, and JavaScript, you are making a static website! &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you want to experiment with blogging through static websites, check out &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. Note that static site generators like Jekyll require knowledge of the command line and a Ruby installation. You should also know Markdown. If that was all Greek to you, don&amp;#39;t worry about it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Version control&lt;/strong&gt;: Think of version control like track changes in Microsoft Word, but a million times more powerful. GitHub uses a version control system called &amp;quot;&lt;a href=&quot;http://git-scm.com/&quot;&gt;git&lt;/a&gt;&amp;quot;, hence its name. GitHub allows you to store a &lt;em&gt;repository&lt;/em&gt; of code on its servers. By pushing &lt;em&gt;commits&lt;/em&gt; of changes to your repository to GitHub, git is able to keep track of every individual change you make to your code. That means you have a complete history of everything you have done, and you can easily revert back to any previous state of your document easily. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: GitHub stores git repositories on the Internet. While git is incredibly powerful as a personal tool, it is even more powerful for working with other progammers. Any public repository on GitHub is available for anyone else to see, meaning that people can look at other people&amp;#39;s code and learn from it. This is called open-source. GitHub also makes copying code easy with processes called &lt;em&gt;cloning&lt;/em&gt; and &lt;em&gt;forking&lt;/em&gt;. For our purposes, GitHub is also smart enough to automatically recognize a static website and host it for its users.&lt;/p&gt;
+&lt;p&gt;For more about GitHub and version control, read the Lab‘s own Emily Ferber’s excellent &lt;a href=&quot;http://knightlab.northwestern.edu/2013/06/13/getting-github-why-journalists-should-know-and-use-the-social-coding-site/&quot;&gt;writeup&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Is a static website right for me?&lt;/h2&gt;
+&lt;p&gt;A static website is definitely not for everyone. Here is a list of reasons why you should &lt;em&gt;not&lt;/em&gt; use a static website:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I do not want to code my own website.&lt;/li&gt;
+&lt;li&gt;My website will be a regular source of original content, and I need a blogging engine to handle that.&lt;/li&gt;
+&lt;li&gt;I really enjoy using WordPress, Drupal, or another blogging service, and I do not want to try something different.&lt;/li&gt;
+&lt;li&gt;I do not mind paying a monthly fee to host on a server in addition to my yearly domain fee.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Still here? Let&amp;#39;s learn how to get your static website on GitHub. For free.&lt;/p&gt;
+&lt;h2&gt;Hosting a Website on GitHub&lt;/h2&gt;
+&lt;p&gt;These steps assume that you have already completed the coding on your website. However, putting your code on GitHub does not mean it is final! Quite the contrary! Using GitHub early in your development process will make your changes much easier to navigate.&lt;/p&gt;
+&lt;p&gt;Additionally, the following screenshots use GitHub for Mac, but GitHub for Windows uses a very similar workflow.&lt;/p&gt;
+&lt;h4&gt;Pushing to GitHub&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a GitHub account on github.com. &lt;/li&gt;
+&lt;li&gt;Download either &lt;a href=&quot;http://mac.github.com/&quot;&gt;GitHub for Mac&lt;/a&gt; or &lt;a href=&quot;http://windows.github.com/&quot;&gt;GitHub for Windows&lt;/a&gt;, depending on your operating system. Open the app and log in using the account you just created.&lt;/li&gt;
+&lt;li&gt;(On Mac): After you login, click advanced and make sure that your name and email are correct. Then, click “Install Command Line Tools”, just in case you want to start using the command line later in life. Git is actually a command line tool, but GitHub&amp;#39;s applications take its functionality and present it in an attractive interface.&lt;/li&gt;
+&lt;li&gt;Create a new repository in your GitHub application. Name it your-username.github.io. The name is &lt;em&gt;very&lt;/em&gt; important, as GitHub will only recognize your site if the repository is named this way. Note the folder that GitHub is saving the repository to. Make sure the “Push to GitHub?” box is checked.&lt;/li&gt;
+&lt;li&gt;Move your website&amp;#39;s files into the folder that GitHub just created when you made the repository. &lt;strong&gt;IMPORTANT&lt;/strong&gt;: Your homepage HTML file must be called “index.html”, and it must exist in the top-level directory.&lt;/li&gt;
+&lt;li&gt;Back in the GitHub application, you should see your files in the left column. Make sure they are all checked. If so, enter a message in the text box called “commit summary”, something like “initial commit.” Then, click the commit button.&lt;/li&gt;
+&lt;li&gt;Click the “Publish repo” button in the top right corner.&lt;/li&gt;
+&lt;li&gt;Give it about 10 minutes, then check your-username.github.io. Your website should be there!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;Using a custom domain name&lt;/h4&gt;
+&lt;p&gt;You can just leave your website at that address (it&amp;#39;ll give you some serious street cred in the developer world), but if you have a custom domain you would like to use, it is very simple to make GitHub redirect your page.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Log in to your domain registrar and find where to change your host records. If you don&amp;#39;t know, you can usually Google “(domain registrar) change host records”, and your registrar will have an explainer telling you how to do it.&lt;/li&gt;
+&lt;li&gt;Change your domain‘s A Record to 204.232.175.78. This is GitHub’s IP address, which allows GitHub to resolve your URL and serve the correct files. Make sure that you do not have any other A Records associated with your domain.&lt;/li&gt;
+&lt;li&gt;In your website&amp;#39;s directory folder on your computer, create a file called “CNAME”. On the first line, type your domain name. Save the file. Your CNAME file should not have a file extension. It is &lt;em&gt;not&lt;/em&gt; a .txt file. If you create and save the file in a text editor like &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime Text&lt;/a&gt;, you can create the file without an extension.  &lt;/li&gt;
+&lt;li&gt;In your GitHub application, you should see the new CNAME file in the left column. Make sure it is checked and enter your commit message. Have it say something like “Adding CNAME file.”&lt;/li&gt;
+&lt;li&gt;Click “Sync branches.”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It can take as long as 48 hours for your domain to resolve to your GitHub page. However, it is usually pretty quick, so check back in an hour or so. &lt;/p&gt;
+&lt;h4&gt;Now What?&lt;/h4&gt;
+&lt;p&gt;Keep making your website better! If you have changes to make, make them in the repository on your computer. Then, commit them to your repository just like when we added the CNAME file. Every change you make can easily be committed and uploaded to GitHub. The changes you make should appear on your website nearly instantaneously!&lt;/p&gt;
+&lt;h2&gt;What Just Happened?&lt;/h2&gt;
+&lt;p&gt;If you completed this tutorial, you should feel pretty cool. You just programmed your own website and put it on the Internet for all to see.  Let&amp;#39;s talk about how this happened.&lt;/p&gt;
+&lt;p&gt;You programmed your website using HTML, CSS, and JavaScript. You tested and played around by opening the file locally and seeing it in your browser. Your code probably broke sometimes, and maybe you felt like giving up and just using a default Tumblr instead. But you didn&amp;#39;t. You kept going and you created a real, working website.&lt;/p&gt;
+&lt;p&gt;By creating a git repository for your code, you have created a living history of everything you do to that website from this point on. By putting it on GitHub, that history exists on the Internet, and the world can see its realized, current state through GitHub Pages. All of its internal organs, all of the code, are publicly available. Perhaps that is scary to some, but it is actually &lt;em&gt;awesome&lt;/em&gt;. If you are having issues with your code, point someone who can help to your repository. They can clone your code, play around, and help you make it work. Collaboration happens easier and more often because of GitHub.&lt;/p&gt;
+&lt;p&gt;More importantly, if this is your first experience coding, you are proof that it is possible. Everyone can see your work and have a better place to start from. You are pushing the world to become better users of the Internet, one little static website at a time.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Lessons of Running My First News Apps Team</title>
       <link>http://www.tylerjfisher.com/articles/news_apps_team/</link>
