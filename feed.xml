@@ -5,13 +5,13 @@
     <atom:link href="http://www.tylerjfisher.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://www.tylerjfisher.com</link>
     <description>News Apps Developer</description>
-    <pubDate>Sun, 27 Oct 2013 01:00:00 +0100</pubDate>
+    <pubDate>Sat, 26 Oct 2013 19:00:00 -0500</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
       <title>For journalists, web literacy is not quite enough</title>
       <link>http://www.tylerjfisher.com/articles/data_literacy/</link>
-      <pubDate>Sun, 27 Oct 2013 01:00:00 +0100</pubDate>
+      <pubDate>Sat, 26 Oct 2013 19:00:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/data_literacy/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on the &lt;a href=&quot;http://knightlab.northwestern.edu/2013/10/27/mozfest-2013-for-journalists-web-literacy-is-not-quite-enough/&quot; target=&quot;_blank&quot;&gt;Knight Lab blog&lt;/a&gt;&lt;/h6&gt;
@@ -32,7 +32,7 @@
     <item>
       <title>How to - Portfolio sites for journalists, GitHub makes ‘em cheap and (kinda) easy</title>
       <link>http://www.tylerjfisher.com/articles/portfolio/</link>
-      <pubDate>Sat, 03  Aug 2013 01:00:00 +0100</pubDate>
+      <pubDate>Fri, 02  Aug 2013 19:00:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/portfolio/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on the &lt;a href=&quot;http://knightlab.northwestern.edu/2013/08/02/how-to-portfolio-sites-for-journalists-github-makes-em-cheap-and-kinda-easy/&quot; target=&quot;_blank&quot;&gt;Knight Lab blog&lt;/a&gt;.&lt;/h6&gt;
@@ -93,7 +93,7 @@
     <item>
       <title>Lessons of Running My First News Apps Team</title>
       <link>http://www.tylerjfisher.com/articles/news_apps_team/</link>
-      <pubDate>Wed, 05 Jun 2013 01:00:00 +0100</pubDate>
+      <pubDate>Tue, 04 Jun 2013 19:00:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/news_apps_team/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on &lt;a href=&quot;http://source.mozillaopennews.org/en-US/articles/lessons-running-my-first-news-apps-team/&quot; target=&quot;_blank&quot;&gt;Source&lt;/a&gt;.&lt;/h6&gt;
@@ -130,7 +130,7 @@
     <item>
       <title>Intelligent Story Modeling</title>
       <link>http://www.tylerjfisher.com/articles/intelligent_story_modeling/</link>
-      <pubDate>Sat, 27 Apr 2013 01:00:00 +0100</pubDate>
+      <pubDate>Fri, 26 Apr 2013 19:00:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/intelligent_story_modeling/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on &lt;a href=&quot;https://medium.com/rethinking-the-news/4cf61f22f4d4&quot; target=&quot;_blank&quot;&gt;Medium&lt;/a&gt;.&lt;/h6&gt;
@@ -163,7 +163,7 @@
     <item>
       <title>What j-schools can learn from music conservatories</title>
       <link>http://www.tylerjfisher.com/articles/compj/</link>
-      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 04 Feb 2013 18:00:00 -0600</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/compj/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on the &lt;a href=&quot;http://knightlab.northwestern.edu/2013/02/05/what-j-schools-can-learn-from-music-conservatories-compj/&quot; target=&quot;_blank&quot;&gt;Knight Lab blog&lt;/a&gt;&lt;/h6&gt;
@@ -180,7 +180,7 @@
     <item>
       <title>Easy Writing, or, How I Learned to Stop Worrying and Love Markdown</title>
       <link>http://www.tylerjfisher.com/articles/what_is_markdown/</link>
-      <pubDate>Thu, 01 Nov 2012 12:50:00 +0000</pubDate>
+      <pubDate>Thu, 01 Nov 2012 12:50:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/what_is_markdown/</guid>
       <author></author>
       <description>&lt;p&gt;About six months ago, I started using &lt;a href=&quot;http://daringfireball.net/projects/markdown&quot;&gt;Markdown&lt;/a&gt; to take notes in class, to write essays, to keep track of meetings, to make project to-do lists — for just about everything. Markdown is the reason I chose to use &lt;a href=&quot;http://scriptogr.am/&quot;&gt;Scriptogr.am&lt;/a&gt; for this blog. People who see my screen in a class often ask what I‘m doing, and I’ve been recognized elsewhere as “the kid who codes his notes.” It&amp;#39;s really not that scary. I think Markdown is for everyone. So this is an explainer on how I switched my written life to Markdown, and an argument for why more people, especially journalists, should do so.&lt;/p&gt;
@@ -242,7 +242,7 @@
     <item>
       <title>Failing, Flailing</title>
       <link>http://www.tylerjfisher.com/articles/failing_flailing/</link>
-      <pubDate>Mon, 29 Oct 2012 02:31:00 +0000</pubDate>
+      <pubDate>Mon, 29 Oct 2012 02:31:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/failing_flailing/</guid>
       <author></author>
       <description>&lt;p&gt;I have had an anger problem for my entire life. In preschool, I was almost held back for a third year because I couldn&amp;#39;t control my temper whenever I lost a game or experienced any setback at all[1]. More generally, I hated failure. I still do.&lt;/p&gt;
