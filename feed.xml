@@ -5,13 +5,45 @@
     <atom:link href="http://www.tylerjfisher.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://www.tylerjfisher.com</link>
     <description>News Apps Developer</description>
-    <pubDate>Thu, 26 Dec 2013 19:00:00 -0500</pubDate>
+    <pubDate>Tue, 22 Apr 2014 19:00:00 -0500</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
     <item>
+      <title>How We Built Borderland Out Of A Spreadsheet</title>
+      <link>http://www.tylerjfisher.com/articles/borderland/</link>
+      <pubDate>Tue, 22 Apr 2014 19:00:00 -0500</pubDate>
+      <guid isPermaLink="true">http://www.tylerjfisher.com/articles/borderland/</guid>
+      <author></author>
+      <description>&lt;h6&gt;Note: This was originally published on the &lt;a href=&quot;http://blog.apps.npr.org/2014/04/23/how-we-built-borderland-out-of-a-spreadsheet.html&quot; target=&quot;_blank&quot;&gt;NPR Visuals blog&lt;/a&gt;&lt;/h6&gt;
+&lt;p&gt;Since the NPR News Apps team merged with the Multimedia team, now known as the Visuals team, we&amp;#39;ve been working on different types of projects. &lt;a href=&quot;http://apps.npr.org/tshirt&quot;&gt;Planet Money Makes a T-Shirt&lt;/a&gt; was the first real “Visuals” project, and since then, we&amp;#39;ve been telling more stories that are driven by photos and video such as &lt;a href=&quot;http://apps.npr.org/wolves&quot;&gt;Wolves at the Door&lt;/a&gt; and &lt;a href=&quot;http://apps.npr.org/grave-science&quot;&gt;Grave Science&lt;/a&gt;. &lt;a href=&quot;http://apps.npr.org/borderland&quot;&gt;Borderland&lt;/a&gt; is the most recent visual story we have built, and its size and breadth required us to develop a smart process for handling a huge variety of content. &lt;/p&gt;
+&lt;p&gt;Borderland is a giant slide deck. 129 slides, to be exact. Within those slides, we tell 12 independent stories about the U.S.-Mexico border. Some of these stories are told &lt;a href=&quot;http://apps.npr.org/borderland/#_/empty-houses&quot;&gt;in photos&lt;/a&gt;, some are told &lt;a href=&quot;http://apps.npr.org/borderland/#_/apprehension&quot;&gt;in text&lt;/a&gt;, some are told &lt;a href=&quot;http://apps.npr.org/borderland/#_/drawing-the-line&quot;&gt;in maps&lt;/a&gt; and some are told &lt;a href=&quot;http://apps.npr.org/borderland/#_/junior&quot;&gt;in video&lt;/a&gt;. Managing all of this varying content coming from writers, photographers, editors and cartographers was a challenge, and one that made editing an HTML file directly impossible. Instead, we used &lt;a href=&quot;https://docs.google.com/spreadsheet/ccc?key=0AlXMOHKxzQVRdGN6cHM2WFJpZ2pvRVpxM3JqNkUyMlE&amp;amp;usp=sharing#gid=1&quot;&gt;a spreadsheet&lt;/a&gt; to manage all of our content.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tylerjfisher.com/articles/borderland/spreadsheet.jpg&quot; alt=&quot;A screenshot of our content spreadsheet&quot;&gt;&lt;/p&gt;
+&lt;p&gt;On Monday, the team released &lt;a href=&quot;http://github.com/nprapps/copytext&quot;&gt;copytext.py&lt;/a&gt;, a Python library for accessing spreadsheets as native Python objects so that they can be used for templating. Copytext, paired with our Flask-driven &lt;a href=&quot;http://github.com/nprapps/app-template&quot;&gt;app template&lt;/a&gt;, allows us to use Google Spreadsheets as a lightweight CMS. You can read the fine details about how we set that up in the Flask app &lt;a href=&quot;http://blog.apps.npr.org/2014/04/21/introducing-copytext-py.html&quot;&gt;here&lt;/a&gt;, but for now, know that we have a global &lt;code&gt;COPY&lt;/code&gt; object accessible to our templates that is filled with the data from a Google Spreadsheet.&lt;/p&gt;
+&lt;p&gt;In the Google Spreadsheet project, we can create multiple sheets. For Borderland, our most important sheet was the &lt;code&gt;content&lt;/code&gt; sheet, shown above. Within that sheet lived all of the text, images, background colors and more. The most important column in that sheet, however, is the first one, called &lt;code&gt;template&lt;/code&gt;. The template column is filled with the name of a corresponding Jinja2 template we create in our project repo. For example, a row where the &lt;code&gt;template&lt;/code&gt; column has a value of “slide” will be rendered with the “slide.html” template.&lt;/p&gt;
+&lt;p&gt;We do this with some simple looping in our &lt;a href=&quot;https://github.com/nprapps/borders-map/blob/master/templates/index.html&quot;&gt;index.html&lt;/a&gt; file:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/TylerFisher/11218882.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;In this loop, we search for a template matching the value of each row&amp;#39;s &lt;code&gt;template&lt;/code&gt; column. If we find one, we render the row&amp;#39;s content through that template. If it is not found (for example, in the first row of the spreadsheet, where we set column headers), then we skip the row thanks to &lt;code&gt;ignore missing&lt;/code&gt;. We can access all of that row&amp;#39;s content and render the content in any way we like.&lt;/p&gt;
+&lt;p&gt;Let‘s look at a specific example. Here’s row 28 of our spreadsheet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tylerjfisher.com/articles/borderland/row.jpg&quot; alt=&quot;Row 28&quot;&gt;&lt;/p&gt;
+&lt;p&gt;It is given the slide template, and has both text and an image associated with it. Jinja recognizes this template slug and passes the row to the &lt;code&gt;slide.html&lt;/code&gt; template.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/TylerFisher/11218917.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;There&amp;#39;s a lot going on here, but note that the text column is placed within the &lt;code&gt;full-block-content&lt;/code&gt; div, and the image is set in the &lt;code&gt;data-bgimage&lt;/code&gt; attribute in the container div, which we use for lazy-loading our assets at the correct time.&lt;/p&gt;
+&lt;p&gt;The result is &lt;a href=&quot;http://apps.npr.org/borderland/#_/25&quot;&gt;slide 25&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tylerjfisher.com/articles/borderland/slide.jpg&quot; alt=&quot;Slide 25&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Looping through each row of our spreadsheet like this is extremely powerful. It allow us to create arbitrary reusable templates for each of our projects. In Borderland, the vast majority of our rows were &lt;code&gt;slide&lt;/code&gt; templates. However, the &lt;a href=&quot;http://apps.npr.org/borderland/#_/36&quot;&gt;“What&amp;#39;s It Like”&lt;/a&gt; section of the project required a different treatment in the template markup to retain both readability of the quotations and visibiilty of the images. So we created a new template, called &lt;a href=&quot;https://github.com/nprapps/borders-map/blob/master/templates/slide-big-quote.html&quot;&gt;slide-big-quote&lt;/a&gt; to deal with those issues. &lt;/p&gt;
+&lt;p&gt;Other times, we didn‘t need to alter the markup; we just needed to style particular aspects of a slide differently. That’s why we have an &lt;code&gt;extra_class&lt;/code&gt; column that allows us to tie classes to particular rows and style them properly in our LESS file. For example, we gave many slides within the &lt;a href=&quot;http://apps.npr.org/borderland/#_/words&quot;&gt;“Words”&lt;/a&gt; section the class &lt;code&gt;word-pair&lt;/code&gt; to handle the treatment of the text in this section. Rather than write a whole new template, we wrote a &lt;a href=&quot;https://github.com/nprapps/borders-map/blob/master/less/app.less#L1187&quot;&gt;little bit of LESS&lt;/a&gt; to handle the treatment. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.tylerjfisher.com/articles/borderland/words.jpg&quot; alt=&quot;Words&quot;&gt;&lt;/p&gt;
+&lt;p&gt;More importantly, the spreadsheet separated concerns among our team well. Content producers never had to do more than write some rudimentary HTML for each slide in the cell of the spreadsheet, allowing them to focus on editorial voice and flow. Meanwhile, the developers and designers could focus on the templating and functionality as the content evolved in the spreadsheet. We were able to iterate quickly and play with many different treatments of our content before settling on the final product.&lt;/p&gt;
+&lt;p&gt;Using a spreadsheet as a lightweight CMS is certainly an imperfect solution to a difficult problem. Writing multiple lines of HTML in a spreadsheet cell is an unfriendly interface, and relying on Google to synchronize our content seems tenuous at best (though we do create a local .xlsx file with a Fabric command instead of relying on Google for development). But for us, this solution makes the most sense. By making our content modular and templatable, we can iterate over design solutions quickly and effectively and allow our content producers to be directly involved in the process of storytelling on the web.&lt;/p&gt;
+&lt;p&gt;Does this solution sound like something that appeals to you? Check out our &lt;a href=&quot;http://www.github.com/nprapps/app-template&quot;&gt;app template&lt;/a&gt; to see the full rig, or check out &lt;a href=&quot;http://www.github.com/nprapps/copytext&quot;&gt;copytext.py&lt;/a&gt; if you want to template with spreadsheets in Python.&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>I'm 22 years old and what is this.</title>
       <link>http://www.tylerjfisher.com/articles/im_22_and_what_is_this/</link>
-      <pubDate>Thu, 26 Dec 2013 19:00:00 -0500</pubDate>
+      <pubDate>Thu, 26 Dec 2013 18:00:00 -0600</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/im_22_and_what_is_this/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This article was originally published on &lt;a href=&quot;https://medium.com/p/d73c2573c254&quot;&gt;Medium&lt;/a&gt;&lt;/h6&gt;
@@ -44,7 +76,7 @@
     <item>
       <title>For journalists, web literacy is not quite enough</title>
       <link>http://www.tylerjfisher.com/articles/data_literacy/</link>
-      <pubDate>Sat, 26 Oct 2013 20:00:00 -0400</pubDate>
+      <pubDate>Sat, 26 Oct 2013 19:00:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/data_literacy/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on the &lt;a href=&quot;http://knightlab.northwestern.edu/2013/10/27/mozfest-2013-for-journalists-web-literacy-is-not-quite-enough/&quot; target=&quot;_blank&quot;&gt;Knight Lab blog&lt;/a&gt;&lt;/h6&gt;
@@ -65,7 +97,7 @@
     <item>
       <title>How to - Portfolio sites for journalists, GitHub makes ‘em cheap and (kinda) easy</title>
       <link>http://www.tylerjfisher.com/articles/portfolio/</link>
-      <pubDate>Fri, 02  Aug 2013 20:00:00 -0400</pubDate>
+      <pubDate>Fri, 02  Aug 2013 19:00:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/portfolio/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on the &lt;a href=&quot;http://knightlab.northwestern.edu/2013/08/02/how-to-portfolio-sites-for-journalists-github-makes-em-cheap-and-kinda-easy/&quot; target=&quot;_blank&quot;&gt;Knight Lab blog&lt;/a&gt;.&lt;/h6&gt;
@@ -126,7 +158,7 @@
     <item>
       <title>Lessons of Running My First News Apps Team</title>
       <link>http://www.tylerjfisher.com/articles/news_apps_team/</link>
-      <pubDate>Tue, 04 Jun 2013 20:00:00 -0400</pubDate>
+      <pubDate>Tue, 04 Jun 2013 19:00:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/news_apps_team/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on &lt;a href=&quot;http://source.mozillaopennews.org/en-US/articles/lessons-running-my-first-news-apps-team/&quot; target=&quot;_blank&quot;&gt;Source&lt;/a&gt;.&lt;/h6&gt;
@@ -163,7 +195,7 @@
     <item>
       <title>Intelligent Story Modeling</title>
       <link>http://www.tylerjfisher.com/articles/intelligent_story_modeling/</link>
-      <pubDate>Fri, 26 Apr 2013 20:00:00 -0400</pubDate>
+      <pubDate>Fri, 26 Apr 2013 19:00:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/intelligent_story_modeling/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on &lt;a href=&quot;https://medium.com/rethinking-the-news/4cf61f22f4d4&quot; target=&quot;_blank&quot;&gt;Medium&lt;/a&gt;.&lt;/h6&gt;
@@ -196,7 +228,7 @@
     <item>
       <title>What j-schools can learn from music conservatories</title>
       <link>http://www.tylerjfisher.com/articles/compj/</link>
-      <pubDate>Mon, 04 Feb 2013 19:00:00 -0500</pubDate>
+      <pubDate>Mon, 04 Feb 2013 18:00:00 -0600</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/compj/</guid>
       <author></author>
       <description>&lt;h6&gt;Note: This was originally published on the &lt;a href=&quot;http://knightlab.northwestern.edu/2013/02/05/what-j-schools-can-learn-from-music-conservatories-compj/&quot; target=&quot;_blank&quot;&gt;Knight Lab blog&lt;/a&gt;&lt;/h6&gt;
@@ -213,7 +245,7 @@
     <item>
       <title>Easy Writing, or, How I Learned to Stop Worrying and Love Markdown</title>
       <link>http://www.tylerjfisher.com/articles/what_is_markdown/</link>
-      <pubDate>Thu, 01 Nov 2012 12:50:00 -0400</pubDate>
+      <pubDate>Thu, 01 Nov 2012 12:50:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/what_is_markdown/</guid>
       <author></author>
       <description>&lt;p&gt;About six months ago, I started using &lt;a href=&quot;http://daringfireball.net/projects/markdown&quot;&gt;Markdown&lt;/a&gt; to take notes in class, to write essays, to keep track of meetings, to make project to-do lists — for just about everything. Markdown is the reason I chose to use &lt;a href=&quot;http://scriptogr.am/&quot;&gt;Scriptogr.am&lt;/a&gt; for this blog. People who see my screen in a class often ask what I‘m doing, and I’ve been recognized elsewhere as “the kid who codes his notes.” It&amp;#39;s really not that scary. I think Markdown is for everyone. So this is an explainer on how I switched my written life to Markdown, and an argument for why more people, especially journalists, should do so.&lt;/p&gt;
@@ -275,7 +307,7 @@
     <item>
       <title>Failing, Flailing</title>
       <link>http://www.tylerjfisher.com/articles/failing_flailing/</link>
-      <pubDate>Mon, 29 Oct 2012 02:31:00 -0400</pubDate>
+      <pubDate>Mon, 29 Oct 2012 02:31:00 -0500</pubDate>
       <guid isPermaLink="true">http://www.tylerjfisher.com/articles/failing_flailing/</guid>
       <author></author>
       <description>&lt;p&gt;I have had an anger problem for my entire life. In preschool, I was almost held back for a third year because I couldn&amp;#39;t control my temper whenever I lost a game or experienced any setback at all[1]. More generally, I hated failure. I still do.&lt;/p&gt;

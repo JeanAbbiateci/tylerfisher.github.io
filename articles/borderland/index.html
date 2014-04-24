@@ -7,7 +7,7 @@
     <meta name="description" content="Code, writing, presentations and more from Tyler Fisher, news apps developer.">
     <meta property="og:site_name" content="Tyler J. Fisher">
     <meta property="og:title" content="Tyler Fisher">
-    <title>Tyler Fisher
+    <title>How We Built Borderland Out Of A Spreadsheet - Tyler Fisher
     </title>
     <link rel="alternate" href="http://www.tylerjfisher.com/feed.xml" type="application/rss+xml" title="News Apps Developer">
     <script type="text/javascript" src="//use.typekit.net/obm4ofp.js"></script>
@@ -31,10 +31,9 @@
       </nav>
     </header>
     <article>
-      <div class="preview">
-        <h1><a href="/articles/borderland/">How We Built Borderland Out Of A Spreadsheet</a></h1>
-        <p class="date"><span>04.22.2014</span></p>
-        <section class="content"><h6>Note: This was originally published on the <a href="http://blog.apps.npr.org/2014/04/23/how-we-built-borderland-out-of-a-spreadsheet.html" target="_blank"><span class="caps">NPR</span> Visuals&nbsp;blog</a></h6>
+      <h1>How We Built Borderland Out Of A Spreadsheet</h1>
+      <p class="date"><span>04.22.2014</span></p>
+      <section class="content"><h6>Note: This was originally published on the <a href="http://blog.apps.npr.org/2014/04/23/how-we-built-borderland-out-of-a-spreadsheet.html" target="_blank"><span class="caps">NPR</span> Visuals&nbsp;blog</a></h6>
 <p>Since the <span class="caps">NPR</span> News Apps team merged with the Multimedia team, now known as the Visuals team, we&#39;ve been working on different types of projects. <a href="http://apps.npr.org/tshirt">Planet Money Makes a T-Shirt</a> was the first real “Visuals” project, and since then, we&#39;ve been telling more stories that are driven by photos and video such as <a href="http://apps.npr.org/wolves">Wolves at the Door</a> and <a href="http://apps.npr.org/grave-science">Grave Science</a>. <a href="http://apps.npr.org/borderland">Borderland</a> is the most recent visual story we have built, and its size and breadth required us to develop a smart process for handling a huge variety of&nbsp;content. </p>
 <p>Borderland is a giant slide deck. 129 slides, to be exact. Within those slides, we tell 12 independent stories about the U.S.-Mexico border. Some of these stories are told <a href="http://apps.npr.org/borderland/#_/empty-houses">in photos</a>, some are told <a href="http://apps.npr.org/borderland/#_/apprehension">in text</a>, some are told <a href="http://apps.npr.org/borderland/#_/drawing-the-line">in maps</a> and some are told <a href="http://apps.npr.org/borderland/#_/junior">in video</a>. Managing all of this varying content coming from writers, photographers, editors and cartographers was a challenge, and one that made editing an <span class="caps">HTML</span> file directly impossible. Instead, we used <a href="https://docs.google.com/spreadsheet/ccc?key=0AlXMOHKxzQVRdGN6cHM2WFJpZ2pvRVpxM3JqNkUyMlE&amp;usp=sharing#gid=1">a spreadsheet</a> to manage all of our&nbsp;content.</p>
 <p><img src="/articles/borderland/spreadsheet.jpg" alt="A screenshot of our content spreadsheet"></p>
@@ -58,41 +57,7 @@
 <p>More importantly, the spreadsheet separated concerns among our team well. Content producers never had to do more than write some rudimentary <span class="caps">HTML</span> for each slide in the cell of the spreadsheet, allowing them to focus on editorial voice and flow. Meanwhile, the developers and designers could focus on the templating and functionality as the content evolved in the spreadsheet. We were able to iterate quickly and play with many different treatments of our content before settling on the final&nbsp;product.</p>
 <p>Using a spreadsheet as a lightweight <span class="caps">CMS</span> is certainly an imperfect solution to a difficult problem. Writing multiple lines of HTML in a spreadsheet cell is an unfriendly interface, and relying on Google to synchronize our content seems tenuous at best (though we do create a local .xlsx file with a Fabric command instead of relying on Google for development). But for us, this solution makes the most sense. By making our content modular and templatable, we can iterate over design solutions quickly and effectively and allow our content producers to be directly involved in the process of storytelling on the&nbsp;web.</p>
 <p>Does this solution sound like something that appeals to you? Check out our <a href="http://www.github.com/nprapps/app-template">app template</a> to see the full rig, or check out <a href="http://www.github.com/nprapps/copytext">copytext.py</a> if you want to template with spreadsheets in&nbsp;Python.</p>
-
-        </section>
-      </div>
-      <div class="preview">
-        <h1><a href="/articles/im_22_and_what_is_this/">I'm 22 years old and what is this.</a></h1>
-        <p class="date"><span>12.26.2013</span></p>
-        <section class="content"><h6>Note: This article was originally published on <a href="https://medium.com/p/d73c2573c254">Medium</a></h6>
-<p>Recently, a lot of people that I admire and look up to have raised their voices, advocating for getting the Internet back to <a href="http://dashes.com/anil/2012/12/the-web-we-lost.html">what it once was</a>. <a href="https://the-pastry-box-project.net/erin-kissane/2013-december-25">An open web</a>. <a href="https://twitter.com/monteiro/status/416746630696558592">A web we shared</a> and owned together. The old web was <a href="https://twitter.com/dansinker/status/416737758598529024">awesome</a>.</p>
-<p>It sure sounds awesome. Currently, our networks and our personal data are controlled by major corporations with no respect for privacy. Silicon Valley, that so-called tech hotbed of “innovation” and “disruption,” is by most reports becoming a culture of <a href="http://www.npr.org/series/251652256/income-inequality-in-the-san-francisco-bay-area">inequality</a> and <a href="http://valleywag.gawker.com/paul-graham-says-women-havent-been-hacking-for-the-pa-1490581236?rev=1388186389">vapidity</a>. Getting back to the founding open standards the web is, I’m told, a solution to all of this. The web should be a place where we can own our data, where our best developers focus on solving the problems we need to solve as a democratic society. An open web accepts all people and creates a culture of&nbsp;inclusion.</p>
-<p>Again, sounds great. As a webmaker, I want an open web. But as someone who has never experienced that, I don’t know where to begin in making it. I’m not sure simply reverting back to what we had is the right path if we want to include people who have never experienced the open web or understand its&nbsp;principles.</p>
-<p>
-          <p class="more"><a href="/articles/im_22_and_what_is_this/">more</a></p>
-        </section>
-      </div>
-      <div class="preview">
-        <h1><a href="/articles/data_literacy/">For journalists, web literacy is not quite enough</a></h1>
-        <p class="date"><span>10.26.2013</span></p>
-        <section class="content"><h6>Note: This was originally published on the <a href="http://knightlab.northwestern.edu/2013/10/27/mozfest-2013-for-journalists-web-literacy-is-not-quite-enough/" target="_blank">Knight Lab&nbsp;blog</a></h6>
-<p>One of Mozfest&#39;s most prominent themes this year has been “Build + Teach the Web.” Throughout the keynotes and sessions, Mozilla has pushed its new initiative, <a href="https://webmaker.org/en">Webmaker</a>, as a rallying point for all of us interested in educating the world in becoming creators of the web rather than&nbsp;users.</p>
-<p>It&#39;s a great initiative. Nothing is more important for us as makers than getting more people onboard, especially in journalism. But journalism has a specific set of requirements that make teaching the web a much different and arguably much more difficult&nbsp;task.</p>
-<p>Perhaps the best of Webmaker&#39;s current available resources is its attempt at a <a href="https://webmaker.org/en-US/standard">Web Literacy Standard</a>. It divides web literacy into three “strands”: Exploring, Building and Connecting. Each of these three strands have subsections, such as “Composing for the Web” under Building or “Open Practices” under Connecting. Everything in the standard is relevant and necessary for making the&nbsp;web.</p>
-<p>Unfortunately, it&#39;s not enough for journalists. I have said often that journalists do not need expert programming skills; they just need web literacy. Now, upon seeing the most complete attempt at defining just what web literacy means, journalists still need yet another type of literacy: data&nbsp;literacy.</p>
-<p>This does not mean statistics, or at least not the predictive statistics that you may come across in an academic statistics department. Journalists largely deal with populations, not samples. When we deal with data, we generally deal with all of it. More and more, everyday journalists need to deal with this&nbsp;data.</p>
-<p>What would a data literacy standard look like? I hope to create a more complete attempt in the near future, but data literacy as it relates to the web requires at least a few skills that come to&nbsp;mind:</p>
-<ol>
-<li>Working with spreadsheets. Often data comes in a format that lends itself to a spreadsheet. Journalists need to know not only how to read and write in them, but also how to crunch some numbers and transform the data to find the story in&nbsp;datasets.</li>
-<li>Web scraping. Too much data is not released in a usable format, and it too often takes web scraping skills to extract it. More difficult tasks will always be handled by news devs, but empowering journalists with basic web scraping skills will empower newsrooms to deal with more&nbsp;data.</li>
-<li>Data cleaning. Data is never perfect and often filthy. Journalists need to know what to do about it, or any data project they do will be misleading and&nbsp;incorrect.</li>
-</ol>
-<p>This is far from a complete list of data skills that journalists need. But that list also does not exist in any concise format (certainly, the <a href="http://datajournalismhandbook.org/">Data Journalism Handbook</a> is a great longform resource), and if we want to emphasize to working and future journalists the skills they need, we need something concrete to point to. For web skills, Mozilla&#39;s Web Literacy Standard is a great resource and starting point. But journalists need to consider what data skills we all need. Feel free to send me suggestions on <a href="http://www.twitter.com/tylrfishr">Twitter</a>.</p>
-
-        </section>
-      </div>
-      <div class="nav"><a href="/page/2/">Next page »</a>
-      </div>
+</section>
     </article>
     <div class="border"></div>
     <footer>
