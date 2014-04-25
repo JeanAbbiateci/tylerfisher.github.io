@@ -1,6 +1,0 @@
----
-published: true
-title: wat
-layout: post
----
-wat
